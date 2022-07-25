@@ -7,6 +7,7 @@ class Transaction < ApplicationRecord
   after_save :save_categories
   
   def set_categories
+    return if self.category_strings.nil? || self.category_strings.empty?
     @string_categories = self.category_strings.split(",")
   end
 
