@@ -1,0 +1,8 @@
+<% if @message.next %>
+  <%= turbo_stream.before(@message.next, partial: "messages/message",locals: { message: @message, highlight: true }) %>
+<%else%>
+  <%= turbo_stream.prepend(:messages, partial: "messages/message",locals: { message: @message, highlight: true }) %>
+<%end%>
+<%= turbo_stream.replace "new_message" do %>
+  <%= render partial: "messages/form", locals: { message: Message.new } %>
+<% end %>

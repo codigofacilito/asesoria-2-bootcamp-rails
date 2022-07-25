@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @account %>
+
+<div style="margin:20px 0">
+  <%= render "transactions/form", transaction: @transaction %>
+</div>
+
+<div>
+  <%= link_to "Edit this account", edit_account_path(@account) %> |
+  <%= link_to "Back to accounts", accounts_path %>
+
+  <%= button_to "Destroy this account", @account, method: :delete %>
+</div>
