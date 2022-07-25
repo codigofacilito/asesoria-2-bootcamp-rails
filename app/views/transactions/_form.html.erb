@@ -18,7 +18,10 @@
     <%= form.text_field :amount %>
   </div>
 
-  
+  <div>
+    <%= form.label :category_strings, "Categorías (separadas por coma)", style: "display: block" %>
+    <%= form.text_field :category_strings %>
+  </div>
 
   <div>
     <%= form.submit %>

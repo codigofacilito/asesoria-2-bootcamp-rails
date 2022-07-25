@@ -1,10 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @account %>
+<h1>
+  <strong>Total</strong>
+  <%= @account.total %>
+</h1>
 
 <div style="margin:20px 0">
   <%= render "transactions/form", transaction: @transaction %>
 </div>
+
+
+<div style="margin:20px 0; ">
+  <h2>Gastos por categoría</h2>
+  <div style="display:flex; gap:20px;align-items:flex-start">
+    <%= render @account.categories %>
+  </div>
+</div>
+
+
 
 <div>
   <%= link_to "Edit this account", edit_account_path(@account) %> |
