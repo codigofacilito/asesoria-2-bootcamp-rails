@@ -72,3 +72,7 @@ group :test do
 end
 
 gem "counter_culture", "~> 3.2"
+
+gem "cloudinary", "~> 1.23"
+
+gem "annotate", "~> 3.2"

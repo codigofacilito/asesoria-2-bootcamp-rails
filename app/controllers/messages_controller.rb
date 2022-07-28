@@ -66,6 +66,6 @@ class MessagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def message_params
-      params.require(:message).permit(:target_date, :title)
+      params.require(:message).permit(:target_date, :title, :image)
     end
 end

@@ -1,5 +1,8 @@
 <div id="<%= dom_id message %>" class="<%= 'highlight' if local_assigns[:highlight] %>">
   <div style="display:flex;align-items:center;gap:2em;">
+    <% if message.image.attached? %>
+      <%= image_tag url_for(message.image), height: 30 %>
+    <%end%>
     <h3><%= message.title %></h3>
     <span><%= message.target_date %></span>
   </div>
